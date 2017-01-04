@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:17.04
 MAINTAINER patrickmslattery
 
 RUN apt-get -y update
