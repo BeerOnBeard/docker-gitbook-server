@@ -1,19 +1,13 @@
-FROM ubuntu:17.04
-MAINTAINER patrickmslattery
+FROM node:7.3-alpine
 
-RUN apt-get -y update
+ENV GITBOOK_HOME /data
 
-# Install dependencies
-RUN apt-get install -y curl git calibre && \
-	curl -sL https://deb.nodesource.com/setup | bash - && \
-	apt-get install -y nodejs && \
-	npm install -g gitbook-cli
+RUN apk add --no-cache git
+RUN npm install -g gitbook-cli
+RUN mkdir ${GITBOOK_HOME}
 
-# Install latest version
-RUN gitbook install 3.2.2
-
-RUN mkdir /gitbook
-WORKDIR /gitbook
+WORKDIR ${GITBOOK_HOME}
+VOLUME ${GITBOOK_HOME}
 
 EXPOSE 4000
 
