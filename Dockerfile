@@ -1,5 +1,5 @@
 FROM ubuntu:14.10
-MAINTAINER tobe tobeg3oogle@gmail.com
+MAINTAINER patrickmslattery
 
 RUN apt-get -y update
 
@@ -10,7 +10,7 @@ RUN apt-get install -y curl git calibre && \
 	npm install -g gitbook-cli
 
 # Install latest version
-RUN gitbook install 2.2.0
+RUN gitbook install 3.2.2
 
 RUN mkdir /gitbook
 WORKDIR /gitbook
