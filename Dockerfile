@@ -4,6 +4,7 @@ ENV GITBOOK_HOME /data
 
 RUN apk add --no-cache git
 RUN npm install -g gitbook-cli
+RUN gitbook fetch latest
 RUN mkdir ${GITBOOK_HOME}
 
 WORKDIR ${GITBOOK_HOME}
