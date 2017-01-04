@@ -4,6 +4,7 @@ ENV GITBOOK_HOME /data
 
 RUN apk add --no-cache git
 RUN npm install -g gitbook-cli
+RUN npm install -g gitbook-plugin-structured-toc
 RUN gitbook fetch latest
 RUN mkdir ${GITBOOK_HOME}
 
