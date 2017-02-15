@@ -12,4 +12,4 @@ VOLUME ${GITBOOK_HOME}
 
 EXPOSE 4000
 
-CMD ["gitbook", "serve", "$GITBOOK_HOME"]
+ENTRYPOINT ["gitbook", "serve"]
