@@ -1,8 +1,9 @@
-FROM node:7.5-alpine
+FROM node:7.5
 
 ENV GITBOOK_HOME /data
 
 RUN apt-get update --quiet && \
+    apt-get install -y calibre && \
     npm install -g gitbook-cli && \
     gitbook fetch latest && \
     mkdir ${GITBOOK_HOME};
