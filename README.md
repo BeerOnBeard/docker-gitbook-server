@@ -4,16 +4,16 @@
 
 ## Introduction
 
-Gitbook-server helps to run gitbook without installing nodejs or anything.
+Docker-gitbook-server allows you to run gitbook without installing NodeJS or Gitbook CLI. All you need is Docker.
 
-The [container](https://registry.hub.docker.com/u/tobegit3hub/gitbook-server/) is based on Ubuntu 14.10 and gitbook 1.3.4.
+The [container](https://hub.docker.com/r/beeronbeard/docker-gitbook-server/) is based on the Node 7.5 base image.
 
 ## Usage
 
 Clone your gitbook project in `/home/yourname/yourbook` or anywhere, then run this command.
 
 ```
-docker run -d -p 4000:4000 -v /home/yourname/yourbook:/gitbook tobegit3hub/gitbook-server
+docker run -d -p 4000:4000 -v /home/yourname/yourbook:/data beeronbeard/gitbook-server
 ```
 
 ## SELINUX Error
