@@ -13,4 +13,5 @@ VOLUME ${GITBOOK_HOME}
 
 EXPOSE 4000
 
-CMD ["gitbook", "serve"]
+CMD gitbook install && \
+    gitbook serve
