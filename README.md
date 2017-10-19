@@ -13,7 +13,7 @@ The [container](https://hub.docker.com/r/beeronbeard/docker-gitbook-server/) is 
 Clone your gitbook project in `/home/yourname/yourbook` or anywhere, then run this command.
 
 ```
-docker run -d -p 4000:4000 -v /home/yourname/yourbook:/data beeronbeard/gitbook-server
+docker run -d -p 4000:4000 -v /home/yourname/yourbook:/data beeronbeard/docker-gitbook-server
 ```
 
 ## SELINUX Error
