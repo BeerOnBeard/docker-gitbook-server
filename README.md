@@ -1,5 +1,7 @@
 # GitBook Server
 
+[![Docker Build Status](https://img.shields.io/docker/build/beeronbeard/docker-gitbook-server.svg?style=flat-square)](https://hub.docker.com/r/beeronbeard/docker-gitbook-server/)
+
 ![](gitbook_and_docker.png)
 
 ## Introduction
