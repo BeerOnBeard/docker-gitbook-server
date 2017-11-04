@@ -1,5 +1,13 @@
 FROM node:7.5
 
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/BeerOnBeard/docker-gitbook-server.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0-rc1"
+
 ENV GITBOOK_HOME /data
 
 RUN apt-get update --quiet && \
